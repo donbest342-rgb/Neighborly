@@ -4,6 +4,7 @@ import Category from '../components/categories.jsx'
 import Costestimate from '../components/costestimate.jsx'
 import JoinSection from '../components/joinsection.jsx'
 import HowItWorks from '../components/howitworks.jsx'
+import './about.css'
 
 const home = () => {
   return (
