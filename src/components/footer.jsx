@@ -9,16 +9,18 @@ import {
   IconButton,
   InputAdornment,
   Divider,
-  Link,
+  Typography,
 } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TypographyedInIcon from '@mui/icons-material/TypographyedIn';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { useNavigate } from 'react-router-dom';
 
 export default function Footer() {
+  const Navigate = useNavigate();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -34,7 +36,7 @@ export default function Footer() {
       }}
     >
       <Container maxWidth="lg">
-        {/* Main links + subscribe section */}
+        {/* Main Typographys + subscribe section */}
         <Grid container spacing={6}>
           {/* Company */}
           <Grid item xs={6} sm={3}>
@@ -49,19 +51,19 @@ export default function Footer() {
             </Typography>
             <Box component="ul" sx={{ listStyle: 'none', p: 0, m: 0 }}>
               <li>
-                <Link href="#" color="inherit" underline="hover" sx={{ display: 'block', py: 0.8 }}>
+                <Typography onClick={() => Navigate('/help-center')} color="inherit" underline="hover" sx={{ display: 'block', py: 0.8 }}>
                   Help Center
-                </Link>
+                </Typography>
               </li>
               <li>
-                <Link href="/contact" color="inherit" underline="hover" sx={{ display: 'block', py: 0.8 }}>
+                <Typography onClick={() => Navigate('/contact')} color="inherit" underline="hover" sx={{ display: 'block', py: 0.8 }}>
                   Contact
-                </Link>
+                </Typography>
               </li>
               <li>
-                <Link href="/about" color="inherit" underline="hover" sx={{ display: 'block', py: 0.8 }}>
+                <Typography onClick={() => Navigate('/about')} color="inherit" underline="hover" sx={{ display: 'block', py: 0.8 }}>
                   About Us
-                </Link>
+                </Typography>
               </li>
             </Box>
           </Grid>
@@ -79,14 +81,14 @@ export default function Footer() {
             </Typography>
             <Box component="ul" sx={{ listStyle: 'none', p: 0, m: 0 }}>
               <li>
-                <Link href="/estimates" color="inherit" underline="hover" sx={{ display: 'block', py: 0.8 }}>
+                <Typography onClick={() => Navigate('/estimates')} color="inherit" underline="hover" sx={{ display: 'block', py: 0.8 }}>
                   Cost Estimates
-                </Link>
+                </Typography>
               </li>
               <li>
-                <Link href="#" color="inherit" underline="hover" sx={{ display: 'block', py: 0.8 }}>
+                <Typography onClick={() => Navigate('/customer-safety-tips')} color="inherit" underline="hover" sx={{ display: 'block', py: 0.8 }}>
                   Customer Safety Tips
-                </Link>
+                </Typography>
               </li>
             </Box>
           </Grid>
@@ -104,9 +106,9 @@ export default function Footer() {
             </Typography>
             <Box component="ul" sx={{ listStyle: 'none', p: 0, m: 0 }}>
               <li>
-                <Link href="#" color="inherit" underline="hover" sx={{ display: 'block', py: 0.8 }}>
+                <Typography onClick={() => Navigate('/professional-help-center')} color="inherit" underline="hover" sx={{ display: 'block', py: 0.8 }}>
                   Help Center
-                </Link>
+                </Typography>
               </li>
             </Box>
           </Grid>
@@ -219,20 +221,20 @@ export default function Footer() {
               <InstagramIcon fontSize="small" />
             </IconButton>
             <IconButton size="small" sx={{ color: 'grey.400' }}>
-              <LinkedInIcon fontSize="small" />
+              <TypographyedInIcon fontSize="small" />
             </IconButton>
           </Box>
 
           {/* Copyright & legal */}
           <Typography variant="caption" sx={{ color: 'grey.500', textAlign: 'center' }}>
             © {currentYear} VisCorner |{' '}
-            <Link href="#" color="inherit" underline="hover">
+            <Typography onClick={() => Navigate('/terms-of-service')} color="inherit" underline="hover">
               Terms of Service
-            </Link>{' '}
+            </Typography>{' '}
             |{' '}
-            <Link href="#" color="inherit" underline="hover">
+            <Typography onClick={() => Navigate('/privacy-policy')} color="inherit" underline="hover">
               Privacy Policy
-            </Link>
+            </Typography>
           </Typography>
 
           {/* Back to top (floating in original) */}
