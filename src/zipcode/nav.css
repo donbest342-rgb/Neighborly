@@ -1,0 +1,73 @@
+.navbar{
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    height: 60px;
+
+    .logo {
+        color: white;
+        font-size: 24px;
+    }
+
+    .navlinks {
+        display: flex;
+        gap: 20px;
+
+        .navlink {
+            font-size: 18px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #ffffffaf;
+            &:hover {
+                color: rgb(255, 255, 255);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    .login-btn, .signup-btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .nav-toggle{
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+    }
+}
+
+
+.tnave-links{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+
+    a{
+            font-size: 18px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #000000af;
+            &:hover {
+                color: rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        }
+}

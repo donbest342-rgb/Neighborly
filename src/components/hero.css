@@ -1,0 +1,9 @@
+.hero{
+    background-color: rgb(127, 255, 255);
+    background-image: url(../assets/Gemini_Generated_Image_lgp91klgp91klgp9.png);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+}

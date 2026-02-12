@@ -1,0 +1,11 @@
+.home-banner{
+    /* background-image: url(../assets/Gemini_Generated_Image_lgp91klgp91klgp9.png); */
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: aquamarine;
+}
