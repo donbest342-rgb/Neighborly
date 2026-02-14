@@ -9,7 +9,6 @@ import {
   IconButton,
   InputAdornment,
   Divider,
-  Typography,
 } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import TwitterIcon from '@mui/icons-material/Twitter';
