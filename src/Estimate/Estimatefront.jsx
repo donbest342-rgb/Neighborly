@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   Box,
@@ -18,6 +18,7 @@ import {
 import SearchIcon from '@mui/icons-material/Search';
 import estimatesData from './estimatesData.js';
 
+
 const EstimatesPage = () => {
   const navigate = useNavigate();
   const [search, setSearch] = useState('');
@@ -33,6 +34,10 @@ const EstimatesPage = () => {
     page * itemsPerPage,
     (page + 1) * itemsPerPage
   );
+
+  useEffect(() => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}, [page]);
 
   return (
     <Box sx={{ bgcolor: '#f4f7f9', minHeight: '100vh', py: 6 }}>

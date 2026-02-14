@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Styling.css';
-import { Visibility, VisibilityOff } from '@mui/icons-material';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { IconButton, InputAdornment } from '@mui/material';
 
 export default function StepOne({ onNext, updateForm }) {

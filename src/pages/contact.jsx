@@ -211,7 +211,7 @@ const ContactUs = () => {
             style={{ border: 0 }}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Lagos,Nigeria&output=embed"
+            src="https://www.google.com/maps?q=imo,Nigeria&output=embed"
           />
         </Box>
       </Card>

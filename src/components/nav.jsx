@@ -6,7 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { useNavigate } from 'react-router-dom';
 
-export default function Navbar({ onContactClick }) {
+export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const Navigate = useNavigate();
 
@@ -24,9 +24,9 @@ export default function Navbar({ onContactClick }) {
           </Typography>
 
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 4 }}>
-              <Typography sx={{ cursor: 'pointer'}} fullWidth onClick={() => Navigate('/workers')}>Blog</Typography>
-              <Typography sx={{ cursor: 'pointer'}} fullWidth onClick={() => Navigate('/estimates')}>Cost Estimate</Typography>
-              <Typography sx={{ cursor: 'pointer'}} fullWidth onClick={() => Navigate('/signup')}>Offer Your Services</Typography>
+              <Typography sx={{ cursor: 'pointer'}}  onClick={() => Navigate('/workers')}>Blog</Typography>
+              <Typography sx={{ cursor: 'pointer'}}  onClick={() => Navigate('/estimates')}>Cost Estimate</Typography>
+              <Typography sx={{ cursor: 'pointer'}}  onClick={() => Navigate('/signup')}>Offer Your Services</Typography>
           </Box>
 
           <Button

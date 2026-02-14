@@ -12,10 +12,23 @@ import EstimateDetails from './Estimate/estimatedets.jsx'
 import Estimatefront from './Estimate/Estimatefront.jsx'
 import Contact from './pages/contact.jsx'
 // import ProfileDetails from './components/Profile-Card.jsx'
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [pathname]);
+
+  return null;
+}
 
 const App = () => {
   return (
     <>
+    <ScrollToTop />
       <Nav />
       <Routes>
         <Route path='/' element={<Home/>} />

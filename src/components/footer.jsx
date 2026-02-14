@@ -9,12 +9,13 @@ import {
   IconButton,
   InputAdornment,
   Divider,
+  Link
 } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import TypographyedInIcon from '@mui/icons-material/TypographyedIn';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { useNavigate } from 'react-router-dom';
 
@@ -220,27 +221,27 @@ export default function Footer() {
               <InstagramIcon fontSize="small" />
             </IconButton>
             <IconButton size="small" sx={{ color: 'grey.400' }}>
-              <TypographyedInIcon fontSize="small" />
+              <LinkedInIcon fontSize="small" />
             </IconButton>
           </Box>
 
           {/* Copyright & legal */}
           <Typography variant="caption" sx={{ color: 'grey.500', textAlign: 'center' }}>
             © {currentYear} VisCorner |{' '}
-            <Typography onClick={() => Navigate('/terms-of-service')} color="inherit" underline="hover">
+            <Link onClick={() => Navigate('/')} color="inherit" underline="hover">
               Terms of Service
-            </Typography>{' '}
+            </Link>{' '}
             |{' '}
-            <Typography onClick={() => Navigate('/privacy-policy')} color="inherit" underline="hover">
+            <Link onClick={() => Navigate('/')} color="inherit" underline="hover">
               Privacy Policy
-            </Typography>
+            </Link>
           </Typography>
 
           {/* Back to top (floating in original) */}
           <IconButton
             size="small"
             sx={{
-              position: { xs: 'static', md: 'fixed' },
+              position: { xs: 'fixed', md: 'fixed' },
               bottom: 24,
               right: 24,
               bgcolor: '#1976d2',
