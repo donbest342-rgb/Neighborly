@@ -12,7 +12,7 @@ export default function ProviderForm() {
   };
 
   return (
-    <div className="form-container">
+    <div className="form-container" >
       <Progress step={step} />
 
       {step === 1 && (
